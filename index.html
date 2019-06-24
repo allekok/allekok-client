@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+  <head>
+    <title>
+      ئاڵەکۆک
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body style="animation:fade .5s;">
+    <header>
+      <button type="button" onclick="index();">
+        <h1>
+          ئاڵەکۆک
+        </h1>
+      </button>
+    </header>
+    <div id="main" style="animation:fade 1s">
+      <div class='loading'></div>
+      <script src="./allekok.js"></script>
+      <script>
+	if(localStorage.getItem("last_location") !== null) {
+	    last_location();
+	} else {
+	    index();
+	}
+	check_poets_img_update_all();
+	check_index_version();
+      </script>
+    </div>
+  </body>
+</html>
