@@ -4,21 +4,25 @@ html, body {
 
 @font-face{font-family:'kurd';font-display:swap;font-style:normal;font-weight:400;src:url('./font/DroidNaskh-Regular.woff') format('woff')}
 @font-face{font-family:'Material Icons';font-display:swap;font-style:normal;font-weight:400;src:url('./font/Material-Icons.woff2') format('woff2')}
-.material-icons{font-family:'Material Icons';direction:ltr;line-height:1;display:inline-block;-moz-font-feature-settings:'liga';-moz-osx-font-smoothing:grayscale;font-style:normal}
+.material-icons{font-family:'Material Icons';direction:ltr;line-height:1;display:inline-block;-moz-font-feature-settings:'liga';-moz-osx-font-smoothing:grayscale;font-style:normal;vertical-align:middle}
 
 body {
-    margin:0;
+    margin:1em;
     font-family:'kurd';
     font-size: 12px;
-    background-color:#fff;
+    background:#fff;
+    color:#000;
     box-sizing: border-box;
     line-height:2.5;
-    color:#000;
 }
 
 div, header, footer, h1, h2, h3, a, img, button {
     font-family: inherit;
     box-sizing: border-box;
+}
+
+a, button
+{
     transition: all .15s;
     -webkit-transition: all .15s;
 }
@@ -37,7 +41,6 @@ button {
     background: none;
     border: 0;
     box-shadow: none;
-    cursor: pointer;
     padding: 0;
     outline:0;
 }
@@ -52,45 +55,42 @@ img {
 }
 
 header {
-    background:#15c314;
-    text-align: center;
     -webkit-app-region:drag;
 }
 
 header button:hover {
-    opacity: .8;
+    color:#00e;
 }
 
 header h1 {
-    font-size: 2.2em;
-    padding: .35em 0;
-    color:#fff;
+    font-size: 2.7em;
 }
 
 #main {
     padding:1em;
     margin:auto;
     text-align: center;
+    max-width:1200px;
 }
 
 .poet {
     display: inline-block;
-    width: 22.5%;
+    width: 21%;
     max-width: 100px;
-    margin:.5em 1.25% .1em;
+    margin:.5em 2% .1em;
     cursor:pointer;
 }
-.poet:hover {
+.poet:hover
+{
     opacity:.8;
 }
 .poet img {
-    width:100%;
+    width:75%;
     border-radius:50%;
-    border:1px solid #eee;
 }
 .poet h3 {
+    font-size:1.1em;
     text-align: center;
-    color: #444;
     overflow:hidden;
     white-space: nowrap;
 }
@@ -99,110 +99,91 @@ header h1 {
     body {
 	font-size: 16px;
     }
-    #main {
-	max-width: 1200px;
-    }
-}
-
-@media only screen and (min-width:970px) {
-    .poet {
-	max-width:115px;
-    }
 }
 
 footer {
-    font-size:1.2em;
+    font-size:1.1em;
     text-align: center;
-    margin: 1em 0 1.5em;
+    margin: 1.5em 0;
 }
 footer a, footer button {
     font-size: inherit;
     padding:1em .2em;
-    margin:0 .3em;
-    border-bottom: 1px solid #ddd;
-    color:#555;
+    margin:0 .1em;
+    color:#000;
 }
 footer a:hover, footer button:hover {
-    background-color: #eee;
+    color: #00e;
     border-bottom: 0;
 }
 
 #adrs {
-    font-size:1.5em;
+    font-size:1.3em;
 }
 #current_location {
     display: inline-block;
-    color: #555;
-    padding:1em .5em;
+    padding:.3em;
 }
 #adrs button {
     font-size: inherit;
-    color: #000;
-    padding:1em .5em;
+    padding:.5em .2em;
 }
 #adrs button:hover {
-    background-color: #eee;
+    color: #00e;
 }
 
 #poet_pic img {
     margin: auto;
     border-radius:50%;
-    border:1px solid #eee;
     max-width: 100%;
 }
 #poet_books, #poet_info {
     font-size:1.2em;
     text-align:right;
-    max-width:500px;
+    max-width:600px;
     margin:auto;
 }
 #poet_books p, #poet_info p {
     padding:.5em .7em;
-    border-right:10px solid #888;
-}
+    color:#00e;
+ }
 #poet_books button {
     text-align:inherit;
     font-size:inherit;
     display: block;
     width: 100%;
-    padding:1.2em 2em;
-    color: #000;
-    border-bottom:1px solid #eee;
+    padding:.5em 3em .5em 0;
 }
 #poet_books button:hover {
-    background-color: #eee;
+    color: #00e;
 }
 #poet_info {
-    padding-top:2em;
+    padding-top:1em;
 }
 .poet_info_row {
-    padding:1.2em 2em;
-    border-bottom:1px solid #eee
+    padding:.5em 3em .5em 0;
 }
 .pm {
     display:block;
-    color:#000;
-    padding:1.2em;
-    font-size:1.25em;
-    border-bottom:1px solid #eee;
+    padding:.6em 0;
+    font-size:1.15em;
     width:100%;
     text-align:right;
 }
 .pm:hover {
-    background-color: #eee;
+    color: #00e;
 }
 #poem_desc {
-    background-color:#f6f6f6;
+    background-color:#f3f3f3;
     padding: 1em 0;
     font-size: 1.1em;
-    margin-top:3em;
 }
 #poem_context {
     font-size: 1.3em;
     padding:2em 0 1em;
 }
 #poem_context sup {
-    color:#666;
+    color:#00e;
 }
 #poem_context p {
     padding-bottom:.4em;
@@ -214,8 +195,7 @@ footer a:hover, footer button:hover {
     text-align: right;
 }
 .cf {
-    background-color:#f6f6f6;
-    color:#333;
+    background-color:#f3f3f3;
     padding:1em;
 }
 .d {
@@ -231,35 +211,29 @@ footer a:hover, footer button:hover {
 }
 #poem_nav {
     margin:.5em 0;
+    display:flex;
 }
 #poem_nav button {
-    font-size: 2.5em;
+    width:50%;
+    font-size: 2em;
     padding: 0 1em;
 }
 #poem_nav button:hover {
-    background-color: #eee;
+    color: #00e;
 }
-#poem_nav button:active {
-    background-color:#ddd;
+.fade
+{
+    animation: fade 1s;
 }
-#nav_next {
-    margin-right:1em;
+@keyframes fade
+{
+    from {opacity:0}
+    to {opacity:1}
 }
-@keyframes fade {
-    from {
-	opacity:0;
-    }
-    to {
-	opacity:1;
-    }
-}
-@keyframes load {
-    from {
-	transform:rotate(0deg)
-    }
-    to {
-	transform:rotate(360deg)
-    }
+@keyframes load
+{
+    from {transform:rotate(0deg)}
+    to {transform:rotate(360deg)}
 }
 
 .loading {
@@ -267,25 +241,23 @@ footer a:hover, footer button:hover {
     height:6em;
     border-radius:50%;
     border:5px solid #fff;
-    border-top:5px solid #15c314;
+    border-top:5px solid #00e;
     animation:load .8s infinite linear;
     margin:auto;
 }
 
 #poem_tools button {
-    font-size: 1em;
-    background-color:#f6f6f6;
-    color:#444;
-    padding:1em;
-}
-#fs_smaller {
-    margin-right:2em;
+    font-size:1.1em;
+    padding:.8em;
+    border:2px solid;
+    border-radius:50%;
+    background:#000;
+    color:#fff;
+    margin:0 .2em;
 }
 #poem_tools button:hover {
-    background-color:#eee;
-}
-#poem_tools button:active {
-    background-color:#ddd;
+    background:#00e;
+    color:#fff;
 }
 progress[value],progress:not([value]) {
     -webkit-appearance:none;
@@ -297,10 +269,14 @@ progress[value],progress:not([value]) {
 }
 progress[value]::-webkit-progress-bar {
   background-color: #fff;
-  border-radius: 10px;
-  border:1px solid #eee;
+  border-radius: 1em;
+  border:2px solid #000;
 }
 progress[value]::-webkit-progress-value {
-    background:#15c314;
-    border-radius:10px;
+    background:#00e;
+    border-radius:1em;
+}
+.color-blue
+{
+    color:#00e;
 }
