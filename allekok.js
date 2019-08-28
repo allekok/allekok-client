@@ -297,6 +297,8 @@ function poem (p , b , m)
     ldb.get(localStorage_name , function(bk) {
 	bk = isJSON(bk);
 	const pm = bk ? bk.poems[m] : false;
+	const pm_prev = bk.poems[m-1];
+	const pm_next = bk.poems[m+1];
 
 	let res = "";
 	
@@ -335,10 +337,20 @@ function poem (p , b , m)
       </div>
       </div>
       </div>
-      <div id='poem_nav'>
-      <button type='button' onclick='poem(${p},${b},${m-1})' id='nav_prev'> &lsaquo; </button>
-      <button type='button' onclick='poem(${p},${b},${m+1})' id='nav_next'> &rsaquo; </button>
-      </div>
+      <div id='poem_nav' style='`;
+	if(!(pm_prev || pm_next)) res += 'display:none;';
+	else if(!pm_prev) res += 'text-align:left;';
+	else if(!pm_next) res += 'text-align:right;';
+	res+=`'>`;
+	if(pm_prev)
+	{
+	    res+=`<button type='button' onclick='poem(${p},${b},${m-1})' id='nav_prev'> &lsaquo; ${num_convert(pm_prev.id)}. ${pm_prev.name}</button>`;
+	}
+	if(pm_next)
+	{
+	    res+=`<button type='button' onclick='poem(${p},${b},${m+1})' id='nav_next'>${num_convert(pm_next.id)}. ${pm_next.name} &rsaquo;</button>`;
+	}
+	res+=`</div>
       <div id='poem_tools'>
       <button type='button' onclick="save_fs('bigger')" id='fs_bigger' class='material-icons'>
       arrow_upward

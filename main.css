@@ -108,8 +108,8 @@ footer {
 }
 footer a, footer button {
     font-size: inherit;
-    padding:1em .2em;
-    margin:0 .1em;
+    padding:1em .3em;
+    margin:0 .3em;
     color:#000;
 }
 footer a:hover, footer button:hover {
@@ -210,13 +210,25 @@ footer a:hover, footer button:hover {
     margin-top:1em;
 }
 #poem_nav {
+    width:100%;
     margin:.5em 0;
     display:flex;
 }
 #poem_nav button {
-    width:50%;
-    font-size: 2em;
-    padding: 0 1em;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    width:100%;
+    font-size: 1.1em;
+    padding: 0 .5em;
+}
+#nav_prev
+{
+    text-align:right;
+}
+#nav_next
+{
+    text-align:left;
 }
 #poem_nav button:hover {
     color: #00e;
@@ -245,7 +257,10 @@ footer a:hover, footer button:hover {
     animation:load .8s infinite linear;
     margin:auto;
 }
-
+#poem_tools
+{
+    padding-top:1em;
+}
 #poem_tools button {
     font-size:1.1em;
     padding:.8em;
