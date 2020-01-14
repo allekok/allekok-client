@@ -51,7 +51,6 @@ alt='${idx[p].profname}'>
         </footer>`;
     
     t.innerHTML = res;
-    t.style.paddingTop = "2em";
     t.style.animation = '.5s fade';
     
     set_location(location);
@@ -89,7 +88,7 @@ function getUrl (url, callback)
 
 function get_index()
 {
-    const url = "https://allekok.com/dev/tools/poet.php?poet=all";
+    const url = `${_server}/dev/tools/poet.php?poet=all`;
     
     getUrl(url, function (responseText) {
         localStorage.setItem("index", responseText);
@@ -100,7 +99,7 @@ function get_index()
 
 function get_index_version()
 {
-    const url = "https://allekok.com/desktop/update/index/update-version.txt";
+    const url = `${_server}/desktop/update/index/update-version.txt`;
     
     getUrl(url, function (responseText) {
 	localStorage.setItem("index_update_version" ,
@@ -252,7 +251,7 @@ function get_book(p , b)
 {
     const t = document.getElementById("main"),
 	  rb = get_right_format_book (b),
-	  url = `https://allekok.com/dev/tools/poem.php?poet=${p}&book=${rb}&poem=all&html`,
+	  url = `${_server}/dev/tools/poem.php?poet=${p}&book=${rb}&poem=all&html`,
 	  http = new XMLHttpRequest();
     
     t.innerHTML = progressBar;
@@ -282,7 +281,7 @@ function get_book(p , b)
 
 function get_books_version( p , b )
 {
-    const url = "https://allekok.com/desktop/update/books/update-version.txt";
+    const url = `${_server}/desktop/update/books/update-version.txt`;
     
     getUrl(url, function (responseText) {
 	localStorage.setItem(`book_${p}_${b}_update_version` ,
@@ -380,7 +379,7 @@ function check_index_version()
     const idx = index_valid();
     if(!idx) return;
 
-    const url = "https://allekok.com/desktop/update/index/update-version.txt";
+    const url = `${_server}/desktop/update/index/update-version.txt`;
     
     getUrl(url, function(responseText) {
 	const old_ver = localStorage.getItem("index_update_version") || 0,
@@ -393,7 +392,7 @@ function check_index_version()
 
 function update_index (new_ver)
 {
-    const url = `https://allekok.com/dev/tools/poet.php?poet=all`;
+    const url = `${_server}/dev/tools/poet.php?poet=all`;
     getUrl(url, function(responseText) {
 	localStorage.setItem("index", responseText);
 	localStorage.setItem("index_update_version" , new_ver);
@@ -408,7 +407,7 @@ function check_books_version ( p , b )
 
 	const localStorage_name = `book_${p}_${b}_update_version`,
 	      old_ver = localStorage.getItem(localStorage_name) || 0,
-	      url = `https://allekok.com/desktop/update/books/update-version.txt`;
+	      url = `${_server}/desktop/update/books/update-version.txt`;
 	getUrl(url, function (responseText) {
 	    const new_ver = parseInt(responseText);
 	    if(old_ver == new_ver) return;
@@ -421,7 +420,7 @@ function check_books_version ( p , b )
 function check_book_version( p , b , new_ver , old_ver )
 {
     const rb = get_right_format_book(b),
-	  url = `https://allekok.com/desktop/update/books/update-log.php?ver=${old_ver}&pt=${p}&bk=${rb}`;
+	  url = `${_server}/desktop/update/books/update-log.php?ver=${old_ver}&pt=${p}&bk=${rb}`;
 
     getUrl(url, function (responseText) {
 	if(responseText == "true")
@@ -433,7 +432,7 @@ function update_book(p,b,new_ver)
 {
     const localStorage_baseName = `book_${p}_${b}`,
 	  rb = get_right_format_book(b),
-	  url = `https://allekok.com/dev/tools/poem.php?poet=${p}&book=${rb}&poem=all&html`;
+	  url = `${_server}/dev/tools/poem.php?poet=${p}&book=${rb}&poem=all&html`;
     
     getUrl(url, function (responseText) {
 	ldb.set(localStorage_baseName , responseText);
@@ -465,7 +464,7 @@ function poet_img(p)
 function get_poet_img (p,dist)
 {
     const idx = index_valid(),
-	  url = `https://allekok.com/dev/tools/img-to-b64.php?pt=${p}`;
+	  url = `${_server}/dev/tools/img-to-b64.php?pt=${p}`;
     
     getUrl(url, function (responseText) {
 	ldb.set(`img_${p}`, responseText);
@@ -478,7 +477,7 @@ function get_poet_img (p,dist)
 
 function get_poet_img_version()
 {
-    const url = "https://allekok.com/desktop/update/imgs/update-version.txt";
+    const url = `${_server}/desktop/update/imgs/update-version.txt`;
     
     getUrl(url, function (responseText) {
 	localStorage.setItem('imgs_update_version' ,
@@ -490,7 +489,7 @@ function check_poets_img_update_all ()
 {
     if(localStorage.getItem("imgs_update_version") === null) return;
     
-    const url = "https://allekok.com/desktop/update/imgs/update-version.txt",
+    const url = `${_server}/desktop/update/imgs/update-version.txt`,
 	  old_ver = localStorage.getItem("imgs_update_version"),
 	  idx = index_valid();
     
@@ -506,7 +505,7 @@ function check_poets_img_update_all ()
 
 function check_poet_img_update(p , new_ver, old_ver)
 {
-    const url = `https://allekok.com/desktop/update/imgs/update-log.php?ver=${old_ver}&pt=${p}`;
+    const url = `${_server}/desktop/update/imgs/update-log.php?ver=${old_ver}&pt=${p}`;
     
     getUrl(url, function (responseText) {
 	if(responseText == "true")
@@ -517,7 +516,7 @@ function check_poet_img_update(p , new_ver, old_ver)
 function update_poet_img (p, new_ver)
 {
     const idx = index_valid(),
-	  url = `https://allekok.com/dev/tools/img-to-b64.php?pt=${p}`;
+	  url = `${_server}/dev/tools/img-to-b64.php?pt=${p}`;
     
     getUrl(url, function (responseText) {
 	ldb.set(`img_${p}`, responseText);

@@ -1,18 +1,23 @@
 html, body {
     height:100%;
+    margin:0;
 }
+h1, h2, h3, h4, h5, h6, p, input, a, form, button, select,
+ul, li, ol, header, div, footer, article, section, nav, img, table, tr,
+td, th, textarea, span, i, sup, sub{padding:0;margin:0;border:0;font-family:inherit;font-weight:normal;text-align:inherit;box-sizing:border-box}
 
 @font-face{font-family:'kurd';font-display:swap;font-style:normal;font-weight:400;src:url('./font/DroidNaskh-Regular.woff') format('woff')}
 @font-face{font-family:'Material Icons';font-display:swap;font-style:normal;font-weight:400;src:url('./font/Material-Icons.woff2') format('woff2')}
 .material-icons{font-family:'Material Icons';direction:ltr;line-height:1;display:inline-block;-moz-font-feature-settings:'liga';-moz-osx-font-smoothing:grayscale;font-style:normal;vertical-align:middle}
 
 body {
-    margin:1em;
+    margin:0 auto;
+    padding:1em;
+    max-width:1000px;
     font-family:'kurd';
-    font-size: 12px;
+    font-size:24px;
     background:#fff;
     color:#000;
-    box-sizing: border-box;
     line-height:2.5;
 }
 
@@ -64,32 +69,34 @@ header button:hover {
 
 header h1 {
     font-size: 2.7em;
+    margin:0 0 .5em;
 }
 
 #main {
-    padding:1em;
     margin:auto;
     text-align: center;
-    max-width:1200px;
 }
 
 .poet {
     display: inline-block;
-    width: 21%;
-    max-width: 100px;
-    margin:.5em 2% .1em;
-    cursor:pointer;
+    width: 24%;
+    max-width:115px;
+    margin:.5em .4% .1em;
+    vertical-align:top;
+    box-sizing:border-box;
 }
 .poet:hover
 {
     opacity:.8;
 }
 .poet img {
-    width:75%;
+    width:65%;
     border-radius:50%;
+    display:block;
+    margin:auto;
 }
 .poet h3 {
-    font-size:1.1em;
+    font-size:.58em;
     text-align: center;
     overflow:hidden;
     white-space: nowrap;
@@ -102,7 +109,7 @@ header h1 {
 }
 
 footer {
-    font-size:1.1em;
+    font-size:.7em;
     text-align: center;
     margin: 1.5em 0;
 }
@@ -118,7 +125,7 @@ footer a:hover, footer button:hover {
 }
 
 #adrs {
-    font-size:1.3em;
+    font-size:.75em;
 }
 #current_location {
     display: inline-block;
@@ -138,7 +145,7 @@ footer a:hover, footer button:hover {
     max-width: 100%;
 }
 #poet_books, #poet_info {
-    font-size:1.2em;
+    font-size:.75em;
     text-align:right;
     max-width:600px;
     margin:auto;
@@ -146,7 +153,7 @@ footer a:hover, footer button:hover {
 #poet_books p, #poet_info p {
     padding:.5em .7em;
     color:#00e;
- }
+}
 #poet_books button {
     text-align:inherit;
     font-size:inherit;
@@ -166,7 +173,7 @@ footer a:hover, footer button:hover {
 .pm {
     display:block;
     padding:.6em 0;
-    font-size:1.15em;
+    font-size:.65em;
     width:100%;
     text-align:right;
 }
@@ -176,11 +183,11 @@ footer a:hover, footer button:hover {
 #poem_desc {
     background-color:#f3f3f3;
     padding: 1em 0;
-    font-size: 1.1em;
+    font-size: .65em;
 }
 #poem_context {
-    font-size: 1.3em;
-    padding:2em 0 1em;
+    font-size: .75em;
+    padding:1em 0 .5em;
 }
 #poem_context sup {
     color:#00e;
@@ -219,7 +226,7 @@ footer a:hover, footer button:hover {
     text-overflow:ellipsis;
     white-space:nowrap;
     width:100%;
-    font-size: 1.1em;
+    font-size: .65em;
     padding: 0 .5em;
 }
 #nav_prev
@@ -249,8 +256,8 @@ footer a:hover, footer button:hover {
 }
 
 .loading {
-    width:6em;
-    height:6em;
+    width:3em;
+    height:3em;
     border-radius:50%;
     border:5px solid #fff;
     border-top:5px solid #00e;
@@ -259,10 +266,10 @@ footer a:hover, footer button:hover {
 }
 #poem_tools
 {
-    padding-top:1em;
+    padding-top:.5em;
 }
 #poem_tools button {
-    font-size:1.1em;
+    font-size:.65em;
     padding:.8em;
     border:2px solid;
     border-radius:50%;
@@ -283,9 +290,9 @@ progress[value],progress:not([value]) {
     border-radius:10px;
 }
 progress[value]::-webkit-progress-bar {
-  background-color: #fff;
-  border-radius: 1em;
-  border:2px solid #000;
+    background-color: #fff;
+    border-radius: 1em;
+    border:2px solid #000;
 }
 progress[value]::-webkit-progress-value {
     background:#00e;
@@ -294,4 +301,8 @@ progress[value]::-webkit-progress-value {
 .color-blue
 {
     color:#00e;
+}
+@media only screen and (min-width:600px)
+{
+    body{font-size:28px}
 }
