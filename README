@@ -1,0 +1,5 @@
+Building
+	$ cp config-sample.js config.js
+	# Modify '_server' constant in 'config.js' according
+	# to your needs.
+	$ ./make

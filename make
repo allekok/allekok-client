@@ -6,7 +6,7 @@ const fs = require('fs');
 let content = '';
 
 for(const i in inputs)
-    content += fs.readFileSync(inputs[i]).toString();
+    content += fs.readFileSync(inputs[i]).toString() + '\n';
 
 fs.writeFileSync(output, content);
 console.log(`'${output}' made successfully.`);
