@@ -8,5 +8,5 @@ let content = '';
 for(const i in inputs)
     content += fs.readFileSync(inputs[i]).toString() + '\n';
 
-fs.writeFileSync(output, content);
+fs.writeFileSync(output, content.trim());
 console.log(`'${output}' made successfully.`);

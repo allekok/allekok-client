@@ -17,7 +17,6 @@ function index(k = "dead")
     let res = "", arr = [];
     
     t.innerHTML = loading;
-    t.style.animation = '';
     void t.offsetWidth;
 
     if( !idx )
@@ -51,7 +50,6 @@ alt='${idx[p].profname}'>
         </footer>`;
     
     t.innerHTML = res;
-    t.style.animation = '.5s fade';
     
     set_location(location);
     poet_imgs(arr);
@@ -119,7 +117,6 @@ function poet(p) {
     let res = "";
 
     t.innerHTML = loading;
-    t.style.animation = '';
     void t.offsetWidth;
 
     if(!index_valid())
@@ -176,7 +173,6 @@ onclick='check_books_version(${_p},${b});book(${_p},${b});'
     res += `</div>`;
     
     t.innerHTML = res;
-    t.style.animation = '.5s fade';
     
     set_location( {ki:"poet" , pt:_p} );
     poet_img(_p);
@@ -188,7 +184,6 @@ function book(p , b)
 	  t = document.getElementById("main");
     
     t.innerHTML = loading;
-    t.style.animation = '';
     void t.offsetWidth;
 
     ldb.get(localStorage_name , function(bk) {
@@ -235,7 +230,6 @@ function book(p , b)
         res += `</div>`;
 
         t.innerHTML = res;
-	t.style.animation = '.5s fade';
 	
         set_location({ki:"book",pt:p,bk:b});
         poet_img(p);
@@ -302,7 +296,6 @@ function poem (p , b , m)
 	let res = "";
 	
 	const t = document.getElementById("main");
-	t.style.animation = '';
 	void t.offsetWidth;
 
 	if(!pm)
@@ -363,7 +356,6 @@ function poem (p , b , m)
       	    res += `<div id='poem_desc'>${pm.hdesc}</div>`;
 
 	t.innerHTML = res;
-	t.style.animation = '.5s fade';
 	
 	get_fs();
 	set_location({ki:"poem",pt:p,bk:b,pm:m});
