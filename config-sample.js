@@ -1,3 +1,3 @@
 /* Configuration file */
-const _server = 'https://allekok.com';
+const _server = 'https://allekok.ir';
 
