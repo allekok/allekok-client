@@ -1,6 +1,6 @@
 html, body {
-    height:100%;
-    margin:0;
+	height:100%;
+	margin:0;
 }
 h1, h2, h3, h4, h5, h6, p, input, a, form, button, select,
 ul, li, ol, header, div, footer, article, section, nav, img, table, tr,
@@ -11,298 +11,303 @@ td, th, textarea, span, i, sup, sub{padding:0;margin:0;border:0;font-family:inhe
 .material-icons{font-family:'Material Icons';direction:ltr;line-height:1;display:inline-block;-moz-font-feature-settings:'liga';-moz-osx-font-smoothing:grayscale;font-style:normal;vertical-align:middle}
 
 body {
-    margin:0 auto;
-    padding:1em;
-    max-width:1000px;
-    font-family:'kurd';
-    font-size:24px;
-    background:#fff;
-    color:#000;
-    line-height:2.5;
+	margin:0 auto;
+	padding:.5em;
+	font-family:'kurd';
+	font-size:24px;
+	background:#fff;
+	color:#000;
+	line-height:2.5;
 }
 
 div, header, footer, h1, h2, h3, a, img, button {
-    font-family: inherit;
-    box-sizing: border-box;
+	font-family: inherit;
+	box-sizing: border-box;
 }
 
 a, button
 {
-    transition: all .15s;
-    -webkit-transition: all .15s;
+	transition: all .15s;
+	-webkit-transition: all .15s;
 }
 
 a {
-    text-decoration: none;
-    display: inline-block;
+	text-decoration: none;
+	display: inline-block;
 }
 
 input, textarea, button {
-    appearance: none;
-    -webkit-appearance: none;
+	appearance: none;
+	-webkit-appearance: none;
 }
 
 button {
-    background: none;
-    border: 0;
-    box-shadow: none;
-    padding: 0;
-    outline:0;
+	background: none;
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+	outline:0;
 }
 
 h1, h2, h3, p {
-    font-weight: normal;
-    margin:0;
+	font-weight: normal;
+	margin:0;
 }
 
 img {
-    display: block;
+	display: block;
 }
 
 header {
-    -webkit-app-region:drag;
+	-webkit-app-region:drag;
 }
 
 header button:hover {
-    color:#00e;
+	color:#00e;
 }
 
 header h1 {
-    font-size: 2.7em;
-    margin:0 0 .5em;
+	font-size: 2.7em;
+	margin:0;
 }
 
 #main {
-    margin:auto;
-    text-align: center;
+	margin:auto;
+	text-align: center;
 }
 
 .poet {
-    display: inline-block;
-    width: 24%;
-    max-width:115px;
-    margin:.5em .4% .1em;
-    vertical-align:top;
-    box-sizing:border-box;
+	display: inline-block;
+	width: 25%;
+	max-width:120px;
+	padding:.5em 0 .1em;
+	vertical-align:top;
+	box-sizing:border-box;
+	cursor:pointer;
 }
 .poet:hover
 {
-    opacity:.8;
+	color:#00e;
 }
 .poet img {
-    width:65%;
-    border-radius:50%;
-    display:block;
-    margin:auto;
+	width:65%;
+	border-radius:50%;
+	display:block;
+	margin:auto;
 }
 .poet h3 {
-    font-size:.58em;
-    text-align: center;
-    overflow:hidden;
-    white-space: nowrap;
+	font-size:.58em;
+	text-align: center;
+	overflow:hidden;
+	white-space: nowrap;
 }
 
 @media only screen and (min-width:600px) {
-    body {
-	font-size: 16px;
-    }
+	body {
+		font-size: 16px;
+	}
 }
 
 footer {
-    font-size:.7em;
-    text-align: center;
-    margin: 1.5em 0;
+	font-size:.7em;
+	text-align: center;
+	margin: 1.5em 0;
 }
 footer a, footer button {
-    font-size: inherit;
-    padding:1em .3em;
-    margin:0 .3em;
-    color:#000;
+	font-size: inherit;
+	padding:1em .3em;
+	margin:0 .3em;
+	color:#000;
 }
 footer a:hover, footer button:hover {
-    color: #00e;
-    border-bottom: 0;
+	color: #00e;
+	border-bottom: 0;
 }
 
 #adrs {
-    font-size:.75em;
+	font-size:.75em;
 }
 #current_location {
-    display: inline-block;
-    padding:.3em;
+	display: inline-block;
+	padding:.3em;
 }
 #adrs button {
-    font-size: inherit;
-    padding:.5em .2em;
+	font-size: inherit;
+	padding:.5em .2em;
 }
 #adrs button:hover {
-    color: #00e;
+	color: #00e;
 }
 
 #poet_pic img {
-    margin: auto;
-    border-radius:50%;
-    max-width: 100%;
+	margin: auto;
+	border-radius:50%;
+	max-width: 100%;
 }
 #poet_books, #poet_info {
-    font-size:.75em;
-    text-align:right;
-    max-width:600px;
-    margin:auto;
+	font-size:.75em;
+	text-align:right;
+	margin:auto;
 }
 #poet_books p, #poet_info p {
-    padding:.5em .7em;
-    color:#00e;
+	padding:.5em 0;
+	color:#00e;
+	font-size:1.1em;
 }
 #poet_books button {
-    text-align:inherit;
-    font-size:inherit;
-    display: block;
-    width: 100%;
-    padding:.5em 3em .5em 0;
+	text-align:inherit;
+	font-size:inherit;
+	display: block;
+	width: 100%;
+	padding:.5em 2em .5em 0;
+	font-size:.9em;
 }
 #poet_books button:hover {
-    color: #00e;
+	color: #00e;
 }
 #poet_info {
-    padding-top:1em;
+	padding-top:1em;
 }
 .poet_info_row {
-    padding:.5em 3em .5em 0;
+	padding:.15em 2em .15em 0;
+	font-size:.9em;
 }
 .pm {
-    display:block;
-    padding:.6em 0;
-    font-size:.65em;
-    width:100%;
-    text-align:right;
+	display:block;
+	padding:.6em 0;
+	font-size:.65em;
+	width:100%;
+	text-align:right;
 }
 .pm:hover {
-    color: #00e;
+	color: #00e;
 }
 #poem_desc {
-    background-color:#f3f3f3;
-    padding: 1em 0;
-    font-size: .65em;
+	border-left:2px solid;
+	padding: .5em 0 .5em 1em;
+	font-size: .55em;
+	text-align:left;
 }
 #poem_context {
-    font-size: .75em;
-    padding:1em 0 .5em;
+	font-size: .75em;
+	padding:1em 0 .5em;
 }
 #poem_context sup {
-    color:#00e;
+	color:#00e;
 }
 #poem_context p {
-    padding-bottom:.4em;
+	padding-bottom:.4em;
 }
 .b {
-    margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
 }
 .n, .m {
-    text-align: right;
+	text-align: right;
 }
 .cf {
-    background-color:#f3f3f3;
-    padding:1em;
+	border:2px solid;
+	border-radius:1em;
+	padding:1em;
 }
 .d {
-    font-size: .85em;
+	font-size: .85em;
 }
 .m.d.cf {
-    text-indent: 1em;
+	text-indent: 1em;
 }
 .ptr {
-    background-color: #f6f6f6;
-    padding:1em 0;
-    margin-top:1em;
+	border:2px solid;
+	border-radius:1em;
+	padding:1em;
+	margin-top:1em;
 }
 #poem_nav {
-    width:100%;
-    margin:.5em 0;
-    display:flex;
+	width:100%;
+	margin:.5em 0;
+	display:flex;
 }
 #poem_nav button {
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-    width:100%;
-    font-size: .65em;
-    padding: 0 .5em;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	width:100%;
+	font-size: .65em;
+	padding: 0 .5em;
 }
 #nav_prev
 {
-    text-align:right;
+	text-align:right;
 }
 #nav_next
 {
-    text-align:left;
+	text-align:left;
 }
 #poem_nav button:hover {
-    color: #00e;
+	color: #00e;
 }
 .fade
 {
-    animation: fade 1s;
+	animation: fade 1s;
 }
 @keyframes fade
 {
-    from {opacity:0}
-    to {opacity:1}
+	from {opacity:0}
+	to {opacity:1}
 }
 @keyframes load
 {
-    from {transform:rotate(0deg)}
-    to {transform:rotate(360deg)}
+	from {transform:rotate(0deg)}
+	to {transform:rotate(360deg)}
 }
 
 .loading {
-    width:3em;
-    height:3em;
-    border-radius:50%;
-    border:5px solid #fff;
-    border-top:5px solid #00e;
-    animation:load .8s infinite linear;
-    margin:auto;
+	width:3em;
+	height:3em;
+	border-radius:50%;
+	border:5px solid #fff;
+	border-top:5px solid #00e;
+	animation:load .8s infinite linear;
+	margin:auto;
 }
 #poem_tools
 {
-    padding-top:.5em;
+	padding-top:.5em;
 }
 #poem_tools button {
-    font-size:.65em;
-    padding:.8em;
-    border:2px solid;
-    border-radius:50%;
-    background:#000;
-    color:#fff;
-    margin:0 .2em;
+	font-size:.65em;
+	padding:.8em;
+	border:2px solid;
+	border-radius:50%;
+	background:#000;
+	color:#fff;
+	margin:0 .2em;
 }
 #poem_tools button:hover {
-    background:#00e;
-    color:#fff;
+	background:#00e;
+	color:#fff;
 }
 progress[value],progress:not([value]) {
-    -webkit-appearance:none;
-    appearance:none;
-    max-width:400px;
-    width: 100%;
-    height:40px;
-    border-radius:10px;
+	-webkit-appearance:none;
+	appearance:none;
+	max-width:400px;
+	width: 100%;
+	height:40px;
+	border-radius:10px;
 }
 progress[value]::-webkit-progress-bar {
-    background-color: #fff;
-    border-radius: 1em;
-    border:2px solid #000;
+	background-color: #fff;
+	border-radius: 1em;
+	border:2px solid #000;
 }
 progress[value]::-webkit-progress-value {
-    background:#00e;
-    border-radius:1em;
+	background:#00e;
+	border-radius:1em;
 }
 .color-blue
 {
-    color:#00e;
+	color:#00e;
 }
 @media only screen and (min-width:600px)
 {
-    body{font-size:28px}
+	body{font-size:28px}
 }
