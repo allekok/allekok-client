@@ -1,15 +1,56 @@
+@media only screen and (min-width:600px) {
+	body {
+		font-size:28px
+	}
+}
+@font-face {
+	font-family:'kurd';
+	font-display:swap;
+	font-style:normal;
+	font-weight:400;
+	src:url('./font/DroidNaskh-Regular.woff') format('woff')
+}
+@font-face {
+	font-family:'Material Icons';
+	font-display:swap;
+	font-style:normal;
+	font-weight:400;
+	src:url('./font/Material-Icons.woff2') format('woff2')
+}
+@keyframes fade {
+	from {opacity:0}
+	to {opacity:1}
+}
+@keyframes load {
+	from {transform:rotate(0deg)}
+	to {transform:rotate(360deg)}
+}
 html, body {
 	height:100%;
 	margin:0;
 }
-h1, h2, h3, h4, h5, h6, p, input, a, form, button, select,
-ul, li, ol, header, div, footer, article, section, nav, img, table, tr,
-td, th, textarea, span, i, sup, sub{padding:0;margin:0;border:0;font-family:inherit;font-weight:normal;text-align:inherit;box-sizing:border-box}
-
-@font-face{font-family:'kurd';font-display:swap;font-style:normal;font-weight:400;src:url('./font/DroidNaskh-Regular.woff') format('woff')}
-@font-face{font-family:'Material Icons';font-display:swap;font-style:normal;font-weight:400;src:url('./font/Material-Icons.woff2') format('woff2')}
-.material-icons{font-family:'Material Icons';direction:ltr;line-height:1;display:inline-block;-moz-font-feature-settings:'liga';-moz-osx-font-smoothing:grayscale;font-style:normal;vertical-align:middle}
-
+h1, h2, h3, h4, h5, h6, p, input, a,
+form, button, select, ul, li, ol, header,
+div, footer, article, section, nav, img, table,
+tr, td, th, textarea, span, i, sup, sub {
+	padding:0;
+	margin:0;
+	border:0;
+	font-family:inherit;
+	font-weight:normal;
+	text-align:inherit;
+	box-sizing:border-box
+}
+.material-icons {
+	font-family:'Material Icons';
+	direction:ltr;
+	line-height:1;
+	display:inline-block;
+	-moz-font-feature-settings:'liga';
+	-moz-osx-font-smoothing:grayscale;
+	font-style:normal;
+	vertical-align:middle
+}
 body {
 	margin:0 auto;
 	padding:.5em;
@@ -19,28 +60,22 @@ body {
 	color:#000;
 	line-height:2.5;
 }
-
 div, header, footer, h1, h2, h3, a, img, button {
 	font-family: inherit;
 	box-sizing: border-box;
 }
-
-a, button
-{
+a, button {
 	transition: all .15s;
 	-webkit-transition: all .15s;
 }
-
 a {
 	text-decoration: none;
 	display: inline-block;
 }
-
 input, textarea, button {
 	appearance: none;
 	-webkit-appearance: none;
 }
-
 button {
 	background: none;
 	border: 0;
@@ -48,34 +83,27 @@ button {
 	padding: 0;
 	outline:0;
 }
-
 h1, h2, h3, p {
 	font-weight: normal;
 	margin:0;
 }
-
 img {
 	display: block;
 }
-
 header {
 	-webkit-app-region:drag;
 }
-
 header button:hover {
 	color:#00e;
 }
-
 header h1 {
 	font-size: 2.7em;
 	margin:0;
 }
-
 #main {
 	margin:auto;
 	text-align: center;
 }
-
 .poet {
 	display: inline-block;
 	width: 25%;
@@ -85,8 +113,7 @@ header h1 {
 	box-sizing:border-box;
 	cursor:pointer;
 }
-.poet:hover
-{
+.poet:hover {
 	color:#00e;
 }
 .poet img {
@@ -97,17 +124,10 @@ header h1 {
 }
 .poet h3 {
 	font-size:.58em;
-	text-align: center;
+	text-align:center;
 	overflow:hidden;
-	white-space: nowrap;
+	white-space:nowrap;
 }
-
-@media only screen and (min-width:600px) {
-	body {
-		font-size: 16px;
-	}
-}
-
 footer {
 	font-size:.7em;
 	text-align: center;
@@ -123,7 +143,6 @@ footer a:hover, footer button:hover {
 	color: #00e;
 	border-bottom: 0;
 }
-
 #adrs {
 	font-size:.75em;
 }
@@ -138,7 +157,6 @@ footer a:hover, footer button:hover {
 #adrs button:hover {
 	color: #00e;
 }
-
 #poet_pic img {
 	margin: auto;
 	border-radius:50%;
@@ -189,7 +207,7 @@ footer a:hover, footer button:hover {
 	text-align:left;
 }
 #poem_context {
-	font-size: .75em;
+	font-size:.75em;
 	padding:1em 0 .5em;
 }
 #poem_context sup {
@@ -199,10 +217,10 @@ footer a:hover, footer button:hover {
 	padding-bottom:.4em;
 }
 .b {
-	margin-bottom: 1.5em;
+	margin-bottom:1.5em;
 }
 .n, .m {
-	text-align: right;
+	text-align:right;
 }
 .cf {
 	border:2px solid;
@@ -210,10 +228,10 @@ footer a:hover, footer button:hover {
 	padding:1em;
 }
 .d {
-	font-size: .85em;
+	font-size:.85em;
 }
 .m.d.cf {
-	text-indent: 1em;
+	text-indent:1em;
 }
 .ptr {
 	border:2px solid;
@@ -231,35 +249,21 @@ footer a:hover, footer button:hover {
 	text-overflow:ellipsis;
 	white-space:nowrap;
 	width:100%;
-	font-size: .65em;
-	padding: 0 .5em;
+	font-size:.65em;
+	padding:0 .5em;
 }
-#nav_prev
-{
+#nav_prev {
 	text-align:right;
 }
-#nav_next
-{
+#nav_next {
 	text-align:left;
 }
 #poem_nav button:hover {
 	color: #00e;
 }
-.fade
-{
-	animation: fade 1s;
+.fade {
+	animation:fade 1s;
 }
-@keyframes fade
-{
-	from {opacity:0}
-	to {opacity:1}
-}
-@keyframes load
-{
-	from {transform:rotate(0deg)}
-	to {transform:rotate(360deg)}
-}
-
 .loading {
 	width:3em;
 	height:3em;
@@ -269,14 +273,12 @@ footer a:hover, footer button:hover {
 	animation:load .8s infinite linear;
 	margin:auto;
 }
-#poem_tools
-{
+#poem_tools {
 	padding-top:.5em;
 }
 #poem_tools button {
 	font-size:.65em;
 	padding:.8em;
-	border:2px solid;
 	border-radius:50%;
 	background:#000;
 	color:#fff;
@@ -303,11 +305,6 @@ progress[value]::-webkit-progress-value {
 	background:#00e;
 	border-radius:1em;
 }
-.color-blue
-{
+.color-blue {
 	color:#00e;
-}
-@media only screen and (min-width:600px)
-{
-	body{font-size:28px}
 }
