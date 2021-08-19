@@ -28,7 +28,7 @@ function index(k='dead') {
 			continue
 		res += `<div role='button' onclick='poet(${p.id})' ` +
 			`class='poet'><img id='${p.id}' ` +
-			`src='back.webp' alt='${p.profname}'` +
+			`src='back.png' alt='${p.profname}'` +
 			`><h3 title='${p.profname}'>` +
 			`${p.takh}</h3></div>`
 		arr.push(p.id)
@@ -101,7 +101,7 @@ function poet(p) {
 
 	res += `<div>` +
 		`<div id='poet_pic'>` +
-		`<img id='${id}' src='back.webp' alt='${profname}'>` +
+		`<img id='${id}' src='back.png' alt='${profname}'>` +
 		`</div>` +
 		`<div id='adrs'>` +
 		`<div id='current_location'>${profname}</div>` +
@@ -165,7 +165,7 @@ function book(p, b) {
 
 		res += `<div>` +
 			`<div id='poet_pic'>` +
-			`<img id='${p}' src='back.webp' ` +
+			`<img id='${p}' src='back.png' ` +
 			`alt='${pt.profname}'>` +
 			`</div>` +
 			`<div id='book_info'>` +
@@ -261,7 +261,7 @@ function poem(p, b, m) {
 		res += `<div>` +
 			`<div id='poem_info'>` +
 			`<div id='poet_pic'>` +
-			`<img id='${p}' src='back.webp' ` +
+			`<img id='${p}' src='back.png' ` +
 			`alt='${pt.profname}'></div>` +
 			`<div id='adrs'>` +
 			`<button type='button' onclick='poet(${p})'>` +
