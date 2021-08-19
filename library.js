@@ -87,16 +87,17 @@ function poet(p) {
 		return
 	}
 
+	let _poet
 	for(const item of idx) {
 		if(item.id == p) {
-			poet = item
+			_poet = item
 			break
 		}
 	}
-	const id = poet.id,
-	      profname = poet.profname,
-	      bks = poet.bks,
-	      hdesc = poet.hdesc
+	const id = _poet.id,
+	      profname = _poet.profname,
+	      bks = _poet.bks,
+	      hdesc = _poet.hdesc
 
 	res += `<div>` +
 		`<div id='poet_pic'>` +
