@@ -1,12 +1,12 @@
 #!/bin/node
-const inputs = ['config.js', 'library.js'];
-const output = 'allekok.js';
-const fs = require('fs');
+const inputs = ['config.js', 'library.js']
+const output = 'allekok.js'
+const fs = require('fs')
 
-let content = '';
+let content = ''
 
-for(const i in inputs)
-	content += fs.readFileSync(inputs[i]).toString() + '\n';
+for(const input of inputs)
+	content += fs.readFileSync(input).toString() + '\n'
 
-fs.writeFileSync(output, content.trim());
-console.log(`'${output}' made successfully.`);
+fs.writeFileSync(output, content.trim())
+console.log(`'${output}' made successfully.`)
